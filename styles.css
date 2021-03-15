@@ -1,0 +1,260 @@
+*, *::before, *::after{ /*propiedades generales*/
+
+    box-sizing: border-box;
+    font-family: Verdana;
+    font-weight: 500;
+    font-size: 102%;
+}
+
+                                        /*BODY*/
+body{
+    padding: 0;
+    margin: 0;
+
+    display: flex;                  /* todo junto*/
+    flex-direction: column;         /* un elemento encima del otro*/
+    width: 100vw;                   /*cartesiano*/
+    height: 100vh;                  /*casrtesiano */
+    justify-content: center;        /*desde el centro horizontal*/
+    align-items: center;            /*desde el centro vertical*/
+
+    background-color: rgb(12, 11, 11);
+}
+
+body.correct{
+    background-color: rgb(38, 233, 45);
+}
+body.incorrect{
+    background-color: rgb(214, 33, 33);
+}
+
+                                    /*CIRCULOS PROGRESO*/
+.circulos-progreso{
+    
+    width: 800px;       /*ancho del contenedor*/
+    max-width: 70%;
+
+    margin-bottom: 8px;
+}
+.circulo{
+    width: 30px;
+    height: 30px;
+    margin: 2px 3px;
+    float: left;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(80, 80, 80);
+}
+.circulo.actual{
+    border: 2px solid white;
+    width: 32px;
+    height: 32px;
+}
+.circulo.correct {
+    background-color: rgb(38, 233, 45);
+}
+.circulo.incorrect {
+    background-color: rgb(214, 33, 33);
+}
+
+                                       /*CONTENEDORES*/
+.contenedor{
+    width: 800px;
+    max-width: 70%;
+
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 10px 2px;
+
+}
+
+#contenedor-pregunta{
+    text-align: center;
+}
+
+#pregunta{
+    font-size: 110%;
+    font-weight: bold;
+}
+
+                                        /*BOTONES*/
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;  
+    margin: 20px 0;
+}
+
+.btn{
+    border: 1px solid rgb(76, 67, 67);
+    background-color: rgb(177, 151, 151);
+    
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0px;
+    outline: none;   
+}
+
+.btn:hover{
+    background-color: rgb(224, 192, 192);
+}
+
+.btn-grid .btn:hover{   /*unicamente para los botones de las respuestas*/
+    border: 1.5px solid rgb(76, 67, 67);
+}
+
+
+.btn.incorrect{
+    background-color: rgb(214, 33, 33);
+    color: white;
+}
+.btn.correct{
+    background-color: rgb(38, 233, 45);
+    font-weight: 600;
+    font-size: 90%;
+}
+
+                                            /*IMAGEN*/
+.imagen{
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+    /* margin-left: 100px; */
+    justify-self: center;
+    
+}
+
+.imagen:hover{
+    border:2.5px solid black;
+}
+
+.imagen.correct{
+    border:3px solid green;
+    box-shadow: rgb(38, 233, 45) 0 2px 2px;
+}
+
+.imagen.incorrect{
+    border:3px solid red;
+    box-shadow: rgb(214, 33, 33) 0 2px 2px;
+}
+
+#icono1{
+    margin-right: 5px;
+    margin-bottom: -8px;
+    height: 50px;
+    width: 50px;
+}
+#icono2{
+    margin-left: 5px;
+    margin-bottom: -8px;
+    height: 50px;
+    width: 50px;
+}
+
+                                            /*CHECKBOX*/
+
+label.checkbox{
+    text-align: left;
+    margin-left: -10px;
+    width: 750px;
+}
+.checkbox.incorrect{
+    background-color: rgb(214, 33, 33);
+}
+.checkbox.correct{
+    background-color: rgb(38, 233, 45);
+}
+
+                                          /*INPUT TEXT*/
+label.input{
+    margin-right: 5px; 
+}
+
+input[type=text]{
+   
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px dotted grey;
+    color:  rgb(50, 50,50);
+
+    padding-left: 10px;
+}
+
+
+input[type=text]:focus{
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+input[type=text].correct{
+    color: rgb(30, 145, 33);
+    border-bottom: 2px solid rgb(38, 233, 45);
+}
+
+input[type=text].incorrect{
+    color:rgb(214, 33, 33);
+    border-bottom: 2px solid rgb(214, 33, 33);
+}
+
+
+
+
+#pantalla-inicial h1{
+    font-size: 220%;
+    font-weight: bold;
+    font-family: Impact;
+    text-align: center;
+
+    text-decoration: underline;
+}
+#pantalla-inicial h2{
+    font-size: 130%;
+    font-weight: bold;
+    font-family: Impact;
+    text-align: center;
+}
+#pantalla-inicial p{
+    font-size: 90%;
+    color: gray;
+    text-align: center;
+}
+
+#pantalla-final h1 {
+    font-size: 180%;
+    font-weight: bold;
+    font-family: Impact;
+    text-align: center;
+}
+
+#pantalla-final h2{
+    font-size: 130%;
+    font-weight: bold;
+    font-family: Impact;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+#btn-empezar, #btn-siguiente, #btn-seleccionar, #btn-enviar{
+    font-size: 1.5rem;
+    font-family: fantasy;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.blocked{
+    pointer-events: none;
+}
+.controles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.oculto{ 
+    display: none;
+}  

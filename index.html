@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>AstroQuiz</title>
+
+    <link href="styles.css" rel = "stylesheet" type ="text/css" />
+
+    <script defer src ="script.js"></script>
+
+</head>
+
+<body>
+    <!-- agregar pantalla de inicio-->
+
+    <div id = "circulos-progreso" class="circulos-progreso oculto"></div>
+   
+    <div class="contenedor">
+
+        <div id="contenedor-pregunta" class="oculto"> 
+            <div id="pregunta"> Pregunta </div>
+            <div id="botones-respuesta" class="btn-grid">
+                
+            </div>
+        </div> 
+
+        <div id="pantalla-inicial" class="">
+            <h1> <img src="img/galaxia.jpg" id="icono1" alt="galaxia"> AstroQuiz <img src="img/galaxia.jpg" id="icono2" alt="galaxia"></h1>
+            <h2>Evaluación de conocimiento sobre Astronomía General</h2>
+            <p>(se deberán contestar correctamente más de la mitad de las preguntas para aprobar)</p>
+        </div>
+
+        <div id="pantalla-final" class="oculto">
+            <h1 id="titulo"></h1>
+            <h2 id="puntaje"></h2>
+        </div>
+
+        <div class="controles">
+            <button id="btn-empezar" class="btn"> Empezar </button>
+            <button id="btn-siguiente" class="btn oculto"> Siguiente </button>
+            <button id="btn-seleccionar" class="btn oculto"> Aceptar </button>
+            <button id="btn-enviar" class="btn oculto"> Enviar </button>
+        </div>
+
+    </div>
+    
+    
+
+</body>
+
+
+</html>
